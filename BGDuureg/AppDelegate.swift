@@ -16,6 +16,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+       
+        UINavigationBar.appearance().isTranslucent = false
+
+        let tabBarController = MainTabBarController()
+
+        
+        
+        
+        let navigationController = UINavigationController(rootViewController: tabBarController)
+        let container = MFSideMenuContainerViewController()
+        container.centerViewController = navigationController
+        let leftVC = LeftMenuViewController()
+        container.leftMenuViewController  = leftVC
+        self.window?.rootViewController = container
+        
+        
+
+        
         return true
     }
 

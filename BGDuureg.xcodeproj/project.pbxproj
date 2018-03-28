@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5103BE211FF65BA2002B1C13 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5103BE1B1FF65BA1002B1C13 /* MFSideMenuShadow.m */; };
+		5103BE221FF65BA2002B1C13 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5103BE1D1FF65BA1002B1C13 /* MFSideMenuContainerViewController.m */; };
+		5103BE231FF65BA2002B1C13 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5103BE1F1FF65BA1002B1C13 /* UIViewController+MFSideMenuAdditions.m */; };
+		5103BE2D1FF65C65002B1C13 /* HexColor in Resources */ = {isa = PBXBuildFile; fileRef = 5103BE2C1FF65C65002B1C13 /* HexColor */; };
+		5103BE2F1FF66150002B1C13 /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5103BE2E1FF66150002B1C13 /* SwiftHEXColors.swift */; };
+		51046AE5205F9D9E00F55BDB /* HorooDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51046AE3205F9D9E00F55BDB /* HorooDetialViewController.swift */; };
+		51046AE6205F9D9E00F55BDB /* HorooDetialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51046AE4205F9D9E00F55BDB /* HorooDetialViewController.xib */; };
+		516645C21FFE6B27007AA98B /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516645C11FFE6B27007AA98B /* TabItem.swift */; };
 		516A220E1FF62389004AEF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516A220D1FF62389004AEF95 /* AppDelegate.swift */; };
 		516A22101FF62389004AEF95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516A220F1FF62389004AEF95 /* ViewController.swift */; };
 		516A22131FF62389004AEF95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 516A22111FF62389004AEF95 /* Main.storyboard */; };
@@ -14,6 +22,19 @@
 		516A22181FF62389004AEF95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 516A22161FF62389004AEF95 /* LaunchScreen.storyboard */; };
 		516A22231FF62389004AEF95 /* BGDuuregTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516A22221FF62389004AEF95 /* BGDuuregTests.swift */; };
 		516A222E1FF62389004AEF95 /* BGDuuregUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516A222D1FF62389004AEF95 /* BGDuuregUITests.swift */; };
+		516A223D1FF6374C004AEF95 /* AbstractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516A223C1FF6374C004AEF95 /* AbstractViewController.swift */; };
+		516A22411FF6384B004AEF95 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516A223F1FF6384A004AEF95 /* LeftMenuViewController.swift */; };
+		516A22421FF6384B004AEF95 /* LeftMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516A22401FF6384B004AEF95 /* LeftMenuCell.swift */; };
+		516A22461FF63881004AEF95 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516A22451FF63881004AEF95 /* MainTabBarController.swift */; };
+		516A224C1FF63C5A004AEF95 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516A224B1FF63C5A004AEF95 /* NewsViewController.swift */; };
+		516A224E1FF63C74004AEF95 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516A224D1FF63C74004AEF95 /* FeedbackViewController.swift */; };
+		516A22501FF63C82004AEF95 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516A224F1FF63C82004AEF95 /* ServiceViewController.swift */; };
+		516A22521FF63C90004AEF95 /* HoroodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516A22511FF63C90004AEF95 /* HoroodViewController.swift */; };
+		516A22551FF64A7C004AEF95 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516A22541FF64A7C004AEF95 /* Const.swift */; };
+		51761BA420147F110022CFC5 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51761BA320147F110022CFC5 /* MenuBar.swift */; };
+		51761BA620147F7D0022CFC5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51761BA520147F7D0022CFC5 /* Extensions.swift */; };
+		51AF2A7E2000E77C00D57341 /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AF2A7D2000E77C00D57341 /* NewTableViewCell.swift */; };
+		CB3BB01CDD8421483642D3A7 /* Pods_BGDuureg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E046E0BFE5DC595DA031718 /* Pods_BGDuureg.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +55,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33E7CC8700CE80494DEB76F4 /* Pods-BGDuureg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BGDuureg.release.xcconfig"; path = "Pods/Target Support Files/Pods-BGDuureg/Pods-BGDuureg.release.xcconfig"; sourceTree = "<group>"; };
+		33F417F2040C33F6253BF2C5 /* Pods-BGDuureg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BGDuureg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BGDuureg/Pods-BGDuureg.debug.xcconfig"; sourceTree = "<group>"; };
+		5103BE191FF65B5C002B1C13 /* BGDuureg-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BGDuureg-Bridging-Header.h"; sourceTree = "<group>"; };
+		5103BE1A1FF65BA1002B1C13 /* MFSideMenuShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuShadow.h; sourceTree = "<group>"; };
+		5103BE1B1FF65BA1002B1C13 /* MFSideMenuShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuShadow.m; sourceTree = "<group>"; };
+		5103BE1C1FF65BA1002B1C13 /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
+		5103BE1D1FF65BA1002B1C13 /* MFSideMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuContainerViewController.m; sourceTree = "<group>"; };
+		5103BE1E1FF65BA1002B1C13 /* MFSideMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuContainerViewController.h; sourceTree = "<group>"; };
+		5103BE1F1FF65BA1002B1C13 /* UIViewController+MFSideMenuAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MFSideMenuAdditions.m"; sourceTree = "<group>"; };
+		5103BE201FF65BA1002B1C13 /* UIViewController+MFSideMenuAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MFSideMenuAdditions.h"; sourceTree = "<group>"; };
+		5103BE2C1FF65C65002B1C13 /* HexColor */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HexColor; sourceTree = "<group>"; };
+		5103BE2E1FF66150002B1C13 /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHEXColors.swift; sourceTree = "<group>"; };
+		51046AE3205F9D9E00F55BDB /* HorooDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorooDetialViewController.swift; sourceTree = "<group>"; };
+		51046AE4205F9D9E00F55BDB /* HorooDetialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorooDetialViewController.xib; sourceTree = "<group>"; };
+		516645C11FFE6B27007AA98B /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		516A220A1FF62389004AEF95 /* BGDuureg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BGDuureg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		516A220D1FF62389004AEF95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		516A220F1FF62389004AEF95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +83,19 @@
 		516A22291FF62389004AEF95 /* BGDuuregUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BGDuuregUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		516A222D1FF62389004AEF95 /* BGDuuregUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGDuuregUITests.swift; sourceTree = "<group>"; };
 		516A222F1FF62389004AEF95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		516A223C1FF6374C004AEF95 /* AbstractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractViewController.swift; sourceTree = "<group>"; };
+		516A223F1FF6384A004AEF95 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
+		516A22401FF6384B004AEF95 /* LeftMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuCell.swift; sourceTree = "<group>"; };
+		516A22451FF63881004AEF95 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		516A224B1FF63C5A004AEF95 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		516A224D1FF63C74004AEF95 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		516A224F1FF63C82004AEF95 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		516A22511FF63C90004AEF95 /* HoroodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroodViewController.swift; sourceTree = "<group>"; };
+		516A22541FF64A7C004AEF95 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		51761BA320147F110022CFC5 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		51761BA520147F7D0022CFC5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		51AF2A7D2000E77C00D57341 /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
+		7E046E0BFE5DC595DA031718 /* Pods_BGDuureg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BGDuureg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB3BB01CDD8421483642D3A7 /* Pods_BGDuureg.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +124,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B53D2B6B690C0E23530FA2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E046E0BFE5DC595DA031718 /* Pods_BGDuureg.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5103BE0E1FF65B20002B1C13 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				5103BE1C1FF65BA1002B1C13 /* MFSideMenu.h */,
+				5103BE1E1FF65BA1002B1C13 /* MFSideMenuContainerViewController.h */,
+				5103BE1D1FF65BA1002B1C13 /* MFSideMenuContainerViewController.m */,
+				5103BE1A1FF65BA1002B1C13 /* MFSideMenuShadow.h */,
+				5103BE1B1FF65BA1002B1C13 /* MFSideMenuShadow.m */,
+				5103BE201FF65BA1002B1C13 /* UIViewController+MFSideMenuAdditions.h */,
+				5103BE1F1FF65BA1002B1C13 /* UIViewController+MFSideMenuAdditions.m */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		516645C01FFE6B0D007AA98B /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				516645C11FFE6B27007AA98B /* TabItem.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
 		516A22011FF62389004AEF95 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +161,8 @@
 				516A22211FF62389004AEF95 /* BGDuuregTests */,
 				516A222C1FF62389004AEF95 /* BGDuuregUITests */,
 				516A220B1FF62389004AEF95 /* Products */,
+				B8571AFDE85E6B403F008CB6 /* Pods */,
+				2B53D2B6B690C0E23530FA2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,10 +179,14 @@
 		516A220C1FF62389004AEF95 /* BGDuureg */ = {
 			isa = PBXGroup;
 			children = (
+				516A22561FF64EFF004AEF95 /* Controller */,
+				516A22531FF64A6A004AEF95 /* SupportigFile */,
+				516A223B1FF62A64004AEF95 /* ViewController */,
 				516A220D1FF62389004AEF95 /* AppDelegate.swift */,
 				516A220F1FF62389004AEF95 /* ViewController.swift */,
 				516A22111FF62389004AEF95 /* Main.storyboard */,
 				516A22141FF62389004AEF95 /* Assets.xcassets */,
+				5103BE191FF65B5C002B1C13 /* BGDuureg-Bridging-Header.h */,
 				516A22161FF62389004AEF95 /* LaunchScreen.storyboard */,
 				516A22191FF62389004AEF95 /* Info.plist */,
 			);
@@ -125,6 +211,102 @@
 			path = BGDuuregUITests;
 			sourceTree = "<group>";
 		};
+		516A223B1FF62A64004AEF95 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				516645C01FFE6B0D007AA98B /* Items */,
+				516A223C1FF6374C004AEF95 /* AbstractViewController.swift */,
+				516A223E1FF6382A004AEF95 /* LeftMenuController */,
+				516A22441FF63864004AEF95 /* SideMenu */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		516A223E1FF6382A004AEF95 /* LeftMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				516A22401FF6384B004AEF95 /* LeftMenuCell.swift */,
+				516A223F1FF6384A004AEF95 /* LeftMenuViewController.swift */,
+			);
+			path = LeftMenuController;
+			sourceTree = "<group>";
+		};
+		516A22441FF63864004AEF95 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				516A22451FF63881004AEF95 /* MainTabBarController.swift */,
+				516A22471FF63BD9004AEF95 /* NewsViewController */,
+				516A224A1FF63C0B004AEF95 /* FeedbackController */,
+				516A22481FF63BE7004AEF95 /* ServiceController */,
+				516A22491FF63BFA004AEF95 /* HoroodController */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		516A22471FF63BD9004AEF95 /* NewsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				516A224B1FF63C5A004AEF95 /* NewsViewController.swift */,
+				51AF2A7D2000E77C00D57341 /* NewTableViewCell.swift */,
+				51761BA320147F110022CFC5 /* MenuBar.swift */,
+			);
+			path = NewsViewController;
+			sourceTree = "<group>";
+		};
+		516A22481FF63BE7004AEF95 /* ServiceController */ = {
+			isa = PBXGroup;
+			children = (
+				516A224F1FF63C82004AEF95 /* ServiceViewController.swift */,
+			);
+			path = ServiceController;
+			sourceTree = "<group>";
+		};
+		516A22491FF63BFA004AEF95 /* HoroodController */ = {
+			isa = PBXGroup;
+			children = (
+				516A22511FF63C90004AEF95 /* HoroodViewController.swift */,
+				51046AE3205F9D9E00F55BDB /* HorooDetialViewController.swift */,
+				51046AE4205F9D9E00F55BDB /* HorooDetialViewController.xib */,
+			);
+			path = HoroodController;
+			sourceTree = "<group>";
+		};
+		516A224A1FF63C0B004AEF95 /* FeedbackController */ = {
+			isa = PBXGroup;
+			children = (
+				516A224D1FF63C74004AEF95 /* FeedbackViewController.swift */,
+			);
+			path = FeedbackController;
+			sourceTree = "<group>";
+		};
+		516A22531FF64A6A004AEF95 /* SupportigFile */ = {
+			isa = PBXGroup;
+			children = (
+				5103BE2E1FF66150002B1C13 /* SwiftHEXColors.swift */,
+				516A22541FF64A7C004AEF95 /* Const.swift */,
+				51761BA520147F7D0022CFC5 /* Extensions.swift */,
+			);
+			path = SupportigFile;
+			sourceTree = "<group>";
+		};
+		516A22561FF64EFF004AEF95 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5103BE2C1FF65C65002B1C13 /* HexColor */,
+				5103BE0E1FF65B20002B1C13 /* SideMenu */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B8571AFDE85E6B403F008CB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33F417F2040C33F6253BF2C5 /* Pods-BGDuureg.debug.xcconfig */,
+				33E7CC8700CE80494DEB76F4 /* Pods-BGDuureg.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +314,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 516A22321FF62389004AEF95 /* Build configuration list for PBXNativeTarget "BGDuureg" */;
 			buildPhases = (
+				CB8EE3994C24A4CB07C34167 /* [CP] Check Pods Manifest.lock */,
 				516A22061FF62389004AEF95 /* Sources */,
 				516A22071FF62389004AEF95 /* Frameworks */,
 				516A22081FF62389004AEF95 /* Resources */,
+				93676FF868DF6BA06DA0AFD6 /* [CP] Embed Pods Frameworks */,
+				3E52C15511E1A693A4F2EA99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +378,7 @@
 				TargetAttributes = {
 					516A22091FF62389004AEF95 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					516A221D1FF62389004AEF95 = {
@@ -232,9 +418,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5103BE2D1FF65C65002B1C13 /* HexColor in Resources */,
 				516A22181FF62389004AEF95 /* LaunchScreen.storyboard in Resources */,
 				516A22151FF62389004AEF95 /* Assets.xcassets in Resources */,
 				516A22131FF62389004AEF95 /* Main.storyboard in Resources */,
+				51046AE6205F9D9E00F55BDB /* HorooDetialViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +442,91 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E52C15511E1A693A4F2EA99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BGDuureg/Pods-BGDuureg-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93676FF868DF6BA06DA0AFD6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BGDuureg/Pods-BGDuureg-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/UIColor+Hex/UIColor_Hex.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BGDuureg/Pods-BGDuureg-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB8EE3994C24A4CB07C34167 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BGDuureg-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		516A22061FF62389004AEF95 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				516A22101FF62389004AEF95 /* ViewController.swift in Sources */,
+				516A223D1FF6374C004AEF95 /* AbstractViewController.swift in Sources */,
+				516A22461FF63881004AEF95 /* MainTabBarController.swift in Sources */,
+				516A224E1FF63C74004AEF95 /* FeedbackViewController.swift in Sources */,
+				5103BE211FF65BA2002B1C13 /* MFSideMenuShadow.m in Sources */,
+				516A22421FF6384B004AEF95 /* LeftMenuCell.swift in Sources */,
+				5103BE2F1FF66150002B1C13 /* SwiftHEXColors.swift in Sources */,
+				51761BA620147F7D0022CFC5 /* Extensions.swift in Sources */,
+				516A224C1FF63C5A004AEF95 /* NewsViewController.swift in Sources */,
+				516A22411FF6384B004AEF95 /* LeftMenuViewController.swift in Sources */,
+				516A22521FF63C90004AEF95 /* HoroodViewController.swift in Sources */,
 				516A220E1FF62389004AEF95 /* AppDelegate.swift in Sources */,
+				516A22501FF63C82004AEF95 /* ServiceViewController.swift in Sources */,
+				5103BE231FF65BA2002B1C13 /* UIViewController+MFSideMenuAdditions.m in Sources */,
+				516A22551FF64A7C004AEF95 /* Const.swift in Sources */,
+				51046AE5205F9D9E00F55BDB /* HorooDetialViewController.swift in Sources */,
+				51761BA420147F110022CFC5 /* MenuBar.swift in Sources */,
+				516645C21FFE6B27007AA98B /* TabItem.swift in Sources */,
+				51AF2A7E2000E77C00D57341 /* NewTableViewCell.swift in Sources */,
+				5103BE221FF65BA2002B1C13 /* MFSideMenuContainerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,14 +690,19 @@
 		};
 		516A22331FF62389004AEF95 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33F417F2040C33F6253BF2C5 /* Pods-BGDuureg.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RE94NVJ9SR;
+				DEVELOPMENT_TEAM = 6KHM3Y3BL8;
 				INFOPLIST_FILE = BGDuureg/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = qwe.BGDuureg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -439,14 +710,18 @@
 		};
 		516A22341FF62389004AEF95 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33E7CC8700CE80494DEB76F4 /* Pods-BGDuureg.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RE94NVJ9SR;
+				DEVELOPMENT_TEAM = 6KHM3Y3BL8;
 				INFOPLIST_FILE = BGDuureg/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = qwe.BGDuureg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

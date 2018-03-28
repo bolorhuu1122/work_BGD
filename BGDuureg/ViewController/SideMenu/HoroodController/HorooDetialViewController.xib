@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HorooDetialViewController" customModule="BGDuureg" customModuleProvider="target">
+            <connections>
+                <outlet property="HoroodDetailImageView" destination="Zjp-PL-JcA" id="261-xp-wBX"/>
+                <outlet property="LocationButton" destination="Uah-Tj-fsn" id="HoY-gk-haq"/>
+                <outlet property="ServerButton" destination="NXq-QP-aH3" id="EE3-2f-P3r"/>
+                <outlet property="aboutTextView" destination="aZk-GJ-XTz" id="bwh-kh-8nH"/>
+                <outlet property="numberListButton" destination="WlL-dq-S03" id="TcV-r5-cyQ"/>
+                <outlet property="titleLabel" destination="GfF-ga-6BJ" id="CBb-k4-aVI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9n-va-sJg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="danger" translatesAutoresizingMaskIntoConstraints="NO" id="Zjp-PL-JcA">
+                            <rect key="frame" x="1" y="0.0" width="375" height="219"/>
+                            <color key="backgroundColor" red="1" green="0.86337705504368722" blue="0.25507367391154623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="219" id="cOJ-uV-5xN"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Гарчиг" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfF-ga-6BJ">
+                            <rect key="frame" x="8" y="227" width="359" height="21"/>
+                            <color key="backgroundColor" red="0.18774516633121563" green="1" blue="0.9147619223000365" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aZk-GJ-XTz">
+                            <rect key="frame" x="8" y="256" width="359" height="219"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="219" id="wM4-5N-GwP"/>
+                            </constraints>
+                            <inset key="scrollIndicatorInsets" minX="10" minY="0.0" maxX="10" maxY="10"/>
+                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXq-QP-aH3">
+                            <rect key="frame" x="0.0" y="483" width="374" height="44"/>
+                            <color key="backgroundColor" red="0.038716118782758713" green="0.42356273531913757" blue="0.67050236463546753" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="D03-2x-Cis"/>
+                            </constraints>
+                            <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Үйлчилгээ">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="serverButtonClicked:" destination="-1" eventType="touchUpInside" id="BZU-iC-c1z"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uah-Tj-fsn">
+                            <rect key="frame" x="0.0" y="528" width="374" height="44"/>
+                            <color key="backgroundColor" red="0.046496503055095673" green="0.47062498331069946" blue="0.74500340223312378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="5tk-ek-tI4"/>
+                            </constraints>
+                            <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Хаяг, байршил">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="borderWidth" value="2"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="locationButtonClicked:" destination="-1" eventType="touchUpInside" id="48t-cd-IhA"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WlL-dq-S03">
+                            <rect key="frame" x="0.0" y="573" width="374" height="44"/>
+                            <color key="backgroundColor" red="0.038716118782758713" green="0.42356273531913757" blue="0.67050236463546753" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="kKh-Az-Cc0"/>
+                            </constraints>
+                            <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Утасны жагсаалт">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="numberListButtonClicked:" destination="-1" eventType="touchUpInside" id="Z6N-Xt-yum"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="NXq-QP-aH3" firstAttribute="leading" secondItem="Uah-Tj-fsn" secondAttribute="leading" id="0yC-SX-RPh"/>
+                        <constraint firstItem="Zjp-PL-JcA" firstAttribute="leading" secondItem="u9n-va-sJg" secondAttribute="leading" constant="1" id="B1n-da-Gju"/>
+                        <constraint firstAttribute="bottom" secondItem="WlL-dq-S03" secondAttribute="bottom" constant="50" id="Cjr-Sb-x9f"/>
+                        <constraint firstItem="NXq-QP-aH3" firstAttribute="leading" secondItem="u9n-va-sJg" secondAttribute="leading" id="Def-ny-ZdD"/>
+                        <constraint firstItem="Uah-Tj-fsn" firstAttribute="trailing" secondItem="WlL-dq-S03" secondAttribute="trailing" id="FSd-xw-KXV"/>
+                        <constraint firstItem="GfF-ga-6BJ" firstAttribute="leading" secondItem="aZk-GJ-XTz" secondAttribute="leading" id="LuC-DJ-Iph"/>
+                        <constraint firstItem="WlL-dq-S03" firstAttribute="top" secondItem="Uah-Tj-fsn" secondAttribute="bottom" constant="1" id="NIy-CL-Ckg"/>
+                        <constraint firstItem="Zjp-PL-JcA" firstAttribute="top" secondItem="u9n-va-sJg" secondAttribute="top" id="O98-HA-kML"/>
+                        <constraint firstItem="NXq-QP-aH3" firstAttribute="centerX" secondItem="u9n-va-sJg" secondAttribute="centerX" id="Pf8-Yb-ECB"/>
+                        <constraint firstItem="GfF-ga-6BJ" firstAttribute="trailing" secondItem="aZk-GJ-XTz" secondAttribute="trailing" id="SMR-HZ-XMK"/>
+                        <constraint firstItem="GfF-ga-6BJ" firstAttribute="trailing" secondItem="u9n-va-sJg" secondAttribute="trailingMargin" id="Zex-WT-6Rs"/>
+                        <constraint firstItem="Uah-Tj-fsn" firstAttribute="leading" secondItem="WlL-dq-S03" secondAttribute="leading" id="aqS-6n-Hu5"/>
+                        <constraint firstItem="aZk-GJ-XTz" firstAttribute="top" secondItem="GfF-ga-6BJ" secondAttribute="bottom" constant="8" symbolic="YES" id="dvF-2S-8SH"/>
+                        <constraint firstItem="GfF-ga-6BJ" firstAttribute="leading" secondItem="u9n-va-sJg" secondAttribute="leadingMargin" id="ftj-8l-c3i"/>
+                        <constraint firstItem="NXq-QP-aH3" firstAttribute="top" secondItem="aZk-GJ-XTz" secondAttribute="bottom" constant="8" symbolic="YES" id="gxj-O1-ATk"/>
+                        <constraint firstAttribute="trailing" secondItem="Zjp-PL-JcA" secondAttribute="trailing" constant="-1" id="leG-zd-Skf"/>
+                        <constraint firstItem="NXq-QP-aH3" firstAttribute="trailing" secondItem="Uah-Tj-fsn" secondAttribute="trailing" id="lzn-qY-aPb"/>
+                        <constraint firstItem="aZk-GJ-XTz" firstAttribute="centerX" secondItem="NXq-QP-aH3" secondAttribute="centerX" id="nZW-nT-Gbk"/>
+                        <constraint firstItem="GfF-ga-6BJ" firstAttribute="top" secondItem="Zjp-PL-JcA" secondAttribute="bottom" constant="8" symbolic="YES" id="pV1-21-oKu"/>
+                        <constraint firstItem="Uah-Tj-fsn" firstAttribute="top" secondItem="NXq-QP-aH3" secondAttribute="bottom" constant="1" id="tBW-hT-3p7"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="u9n-va-sJg" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="JAC-gN-TFa"/>
+                <constraint firstItem="u9n-va-sJg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hSf-6X-MWj"/>
+                <constraint firstAttribute="trailing" secondItem="u9n-va-sJg" secondAttribute="trailing" id="mcf-tN-XU0"/>
+                <constraint firstItem="u9n-va-sJg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="roW-24-DDo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="danger" width="98" height="98"/>
+    </resources>
+</document>
