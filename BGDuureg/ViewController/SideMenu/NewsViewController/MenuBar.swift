@@ -62,6 +62,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         horizontalBarView.heightAnchor.constraint(equalToConstant: 4).isActive = true;
         
         
+        print("text")
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.scrollToMenuIndex(menuIndex: indexPath.item)
