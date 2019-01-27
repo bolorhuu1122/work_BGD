@@ -19,7 +19,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
   
     
     let cellId = "cellId"
-    let imageNames = ["food", "enjoy", "cosme", "fitnes","travel"]
+    let imageNames = ["ШИНЭ", "ОНЦЛОХ", "ФОТО", "ВИДЕО"]
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -63,9 +63,6 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         
         
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.scrollToMenuIndex(menuIndex: indexPath.item)
-    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageNames.count
@@ -73,28 +70,21 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuCell
-        
-        cell.imageView.image = UIImage(named: imageNames[(indexPath as NSIndexPath).item])
-        
+        cell.nameLabel.text = imageNames[(indexPath as NSIndexPath).item]
+        cell.backgroundColor =  UIColor(hexString:"e4e4e4")
         if (indexPath.row==0){
-            
-            cell.backgroundColor = UIColor(hexString: "FFD573")
-        }else if (indexPath.row==1){
-            cell.backgroundColor = UIColor(hexString: "B4A5CF")
-        }else if (indexPath.row==2){
-            cell.backgroundColor = UIColor(hexString: "F47A8F")
-        }else if (indexPath.row==3){
-            cell.backgroundColor = UIColor(hexString: "7ED321")
-        }else if (indexPath.row==4){
-            cell.backgroundColor = UIColor(hexString: "7AAAD7")
+            cell.backgroundColor = UIColor(hexString: "a6a6a6")
         }
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: frame.width / 5, height: frame.height)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.scrollToMenuIndex(menuIndex: indexPath.item)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: frame.width / 4, height: frame.height)
+    }
+    // collectionview-n item horoondoh zai.g 0 bolgoj baina. 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
@@ -105,36 +95,21 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     
 }
 
-class BaseCell: UICollectionViewCell {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
-    
-    func setupViews() {
-        
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
 class MenuCell: BaseCell {
     
     let imageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
         
-        //        iv.image = UIImage(named: "food")?.withRenderingMode(.alwaysTemplate)
-        //        iv.tintColor = UIColor.red
-        
         return iv
     }()
     let nameLabel: UILabel = {
         let iv = UILabel()
-        iv.text = "хайр"
-        //        iv.tintColor = UIColor.red
+        iv.textAlignment = .center
+//        iv.frame = CGRect(x:0, y:0, width: self.frame.size.width, height:self.frame.size.height)
+        
+//        iv.text = "хайр"
+         iv.textColor = UIColor.black
         return iv
     }()
     override var isHighlighted: Bool {
@@ -148,19 +123,27 @@ class MenuCell: BaseCell {
         didSet {
             self.layer.borderWidth = 1
             self.layer.borderColor = isSelected ? UIColor.white.cgColor : UIColor.clear.cgColor
+            self.backgroundColor = isSelected ? UIColor(hexString:"a6a6a6") : UIColor(hexString:"e4e4e4")
+            self.nameLabel.textColor = isSelected ? .white : .black
         }
     }
     
     override func setupViews() {
         super.setupViews()
         
-        addSubview(imageView)
+//        addSubview(imageView)
         addSubview(nameLabel)
-        addConstraintsWithFormat("H:[v0(32)]", views: imageView)
-        addConstraintsWithFormat("V:[v0(28)]", views: imageView)
-        
-        addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
-        addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
+//        addConstraintsWithFormat("H:[v0(32)]", views: imageView)
+//        addConstraintsWithFormat("V:[v0(28)]", views: imageView)
+        addConstraintsWithFormat("H:|-[v0]-|", views: nameLabel)
+        addConstraintsWithFormat("V:[v0(20)]", views: nameLabel)
+//        nameLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 5).isActive = true
+//        nameLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -5).isActive = true
+
+        addConstraint(NSLayoutConstraint(item: nameLabel, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint(item: nameLabel, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
+//        addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
+//        addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
     }
     
 }

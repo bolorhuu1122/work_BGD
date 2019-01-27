@@ -80,17 +80,13 @@ class FeedbackViewController: UIViewController {
     lazy var button1: UIButton = {
         var button = UIButton()
         button  = UIButton(frame: CGRect(x:0, y:0, width:self.view.frame.size.width/2, height:self.view.frame.size.height/2-(self.navigationController?.navigationBar.frame.size.height)!-12.5))
-//        print("size\((self.navigationController?.navigationBar.frame.size.height)!-12.5)")
         button.setTitle("Хог хаягдал,бохир орчинтой,холбоотой санал хүсэлт", for: UIControlState.normal)
         button.setImage(UIImage(named:"trash"), for:UIControlState.normal)
-//        button.sd_setImageWithURL(NSURL(string: self.userItem.userImage as String), forState: .Normal, placeholderImage: UIImage(named: "icon_camera"))
         button.backgroundColor  = UIColor(hexString: "0c78be")
-
-//        button.addTarget(self, action: #selector(ProfileViewController.cameraButtonClicked(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        button.addTarget(self, action: #selector(FeedbackViewController.feedSendController(_:)), for: UIControlEvents.touchUpInside)
           button.titleLabel?.numberOfLines = 5
         button.titleLabel?.textAlignment = .center
-
-//
+        button.tag = 1
         button.alignContentVerticallyByCenter(offset: 50);
         button.titleLabel?.font = UIFont(name: LIGHTFONT, size: 10)
 
@@ -101,14 +97,13 @@ class FeedbackViewController: UIViewController {
         button  = UIButton(frame: CGRect(x:self.button1.frame.maxX, y:0, width:self.view.frame.size.width/2,height:self.view.frame.size.height/2-(self.navigationController?.navigationBar.frame.size.height)!-12.5))
         button.setTitle("Зөвшөөрөлгүй зам талбай, хашаа барьж буй тухай санал хүсэлт", for: UIControlState.normal)
         button.setImage(UIImage(named:"road"), for:UIControlState.normal)
-
-        //        button.sd_setImageWithURL(NSURL(string: self.userItem.userImage as String), forState: .Normal, placeholderImage: UIImage(named: "icon_camera"))
         button.backgroundColor  = UIColor(hexString: "0a6cab")
-        //        button.addTarget(self, action: #selector(ProfileViewController.cameraButtonClicked(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        button.addTarget(self, action: #selector(FeedbackViewController.feedSendController(_:)), for: UIControlEvents.touchUpInside)
           button.titleLabel?.numberOfLines = 5
         button.titleLabel?.textAlignment = .center
         button.alignContentVerticallyByCenter(offset: 50);
         button.titleLabel?.font = UIFont(name: LIGHTFONT, size: 10)
+        button.tag = 1
 
         return button
     }();
@@ -119,12 +114,12 @@ class FeedbackViewController: UIViewController {
         button.setImage(UIImage(named:"forest"), for:UIControlState.normal)
 
         button.titleLabel?.numberOfLines = 5
-        //  button.sd_setImageWithURL(NSURL(string: self.userItem.userImage as String), forState: .Normal, placeholderImage: UIImage(named: "icon_camera"))
         button.backgroundColor  = UIColor(hexString: "0c9abe")
-        //        button.addTarget(self, action: #selector(ProfileViewController.cameraButtonClicked(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        button.addTarget(self, action: #selector(FeedbackViewController.feedSendController(_:)), for: UIControlEvents.touchUpInside)
         button.titleLabel?.textAlignment = .center
         button.alignContentVerticallyByCenter(offset: 50);
         button.titleLabel?.font = UIFont(name: LIGHTFONT, size: 10)
+        button.tag = 1
 
         return button
     }();
@@ -134,16 +129,25 @@ class FeedbackViewController: UIViewController {
         button.setImage(UIImage(named:"danger"), for:UIControlState.normal)
 
         button.setTitle("Бусад асуудалтай холбоотой санал хүсэлт", for: UIControlState.normal)
-        //        button.sd_setImageWithURL(NSURL(string: self.userItem.userImage as String), forState: .Normal, placeholderImage: UIImage(named: "icon_camera"))
         button.backgroundColor  = UIColor(hexString: "0a8aab")
-        //        button.addTarget(self, action: #selector(ProfileViewController.cameraButtonClicked(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        button.addTarget(self, action: #selector(FeedbackViewController.feedSendController(_:)), for: UIControlEvents.touchUpInside)
           button.titleLabel?.numberOfLines = 5
         button.titleLabel?.textAlignment = .center
         button.alignContentVerticallyByCenter(offset: 50);
         button.titleLabel?.font = UIFont(name: LIGHTFONT, size: 10)
+        button.tag = 1
 
         return button
     }();
+    
+    @objc func feedSendController(_ sender:UIButton){
+        let sendVC = FeedSendViewController()
+
+
+        sendVC.sanalType = "\(sender.tag)" as NSString
+        self.navigationController?.pushViewController(sendVC, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

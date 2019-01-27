@@ -6,5 +6,6 @@ target ‘BGDuureg’ do
   pod 'UIColor+Hex'
   pod 'MBProgressHUD'
   pod 'SDWebImage'
+
 
 end

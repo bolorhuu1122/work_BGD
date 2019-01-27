@@ -14,7 +14,7 @@ class HoroodViewController: UIViewController,UIScrollViewDelegate {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isTranslucent = false
 
-        self.view.backgroundColor = .yellow
+        self.view.backgroundColor = .white
        
 
         print("height = \(3/2)")
@@ -63,7 +63,6 @@ class HoroodViewController: UIViewController,UIScrollViewDelegate {
             button.titleLabel?.numberOfLines = 5
             button.titleLabel?.textAlignment = .center
 
-
             button.alignContentVerticallyByCenter(offset: 50);
             button.titleLabel?.font = UIFont(name: LIGHTFONT, size: 10)
             scrollView.addSubview(button)
@@ -73,6 +72,7 @@ class HoroodViewController: UIViewController,UIScrollViewDelegate {
     
     @objc func cameraButtonClicked(_ sender:UIButton){
         var detVC = HorooDetialViewController()
+        detVC.horooId = sender.tag
         self.navigationController?.pushViewController(detVC, animated: true)
     }
     

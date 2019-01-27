@@ -20,21 +20,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         UINavigationBar.appearance().isTranslucent = false
 
-        let tabBarController = MainTabBarController()
-
-        
-        
-        
-        let navigationController = UINavigationController(rootViewController: tabBarController)
-        let container = MFSideMenuContainerViewController()
-        container.centerViewController = navigationController
-        let leftVC = LeftMenuViewController()
-        container.leftMenuViewController  = leftVC
-        self.window?.rootViewController = container
-        
         
 
         
+//        let intro = IntroViewController()
+//        let navigationController = UINavigationController(rootViewController: intro)
+//        navigationController.navigationBar.isHidden = true
+////        let container = MFSideMenuContainerViewController()
+////        container.centerViewController = navigationController
+////        let leftVC = LeftMenuViewController()
+////        container.leftMenuViewController  = leftVC
+//        self.window?.rootViewController = navigationController
+        if !UserDefaults.standard.bool(forKey: "TUTORIAL"){
+            print("tutorial1")
+            let tutorialVC = IntroViewController()
+            let navigationController = UINavigationController(rootViewController: tutorialVC)
+            tutorialVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            self.window?.rootViewController = navigationController
+
+        }else{
+            let tabBarController = MainTabBarController()
+            let navigationController = UINavigationController(rootViewController: tabBarController)
+            
+            let container = MFSideMenuContainerViewController()
+            container.centerViewController = navigationController
+            let leftVC = LeftMenuViewController()
+            container.leftMenuViewController  = leftVC
+            self.window?.rootViewController = container
+        }
+       
+
         return true
     }
 

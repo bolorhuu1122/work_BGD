@@ -22,6 +22,8 @@ let MAINGREEN = UIColor(hexString: "7dd0c3")
 let LIGHTGREEN = UIColor(hexString: "bee8e1")     
 let TEXTCOLOR = UIColor(hexString: "414042")  //UIColor(hexString:"3b5998")
 let YELLOWCOLOR = UIColor(hexString: "ff6602")  //UIColor(hexString:"3b5998")
+let BLUECOLOR = UIColor(hexString: "0979bf")  //UIColor(hexString:"3b5998")
+
 
 let LIGHTTEXTCOLOR = UIColor(hexString: "b0b0b1")//
 let FACECOLOR = UIColor(hexString:"3b5998")

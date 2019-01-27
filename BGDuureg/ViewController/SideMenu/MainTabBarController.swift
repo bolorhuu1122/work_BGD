@@ -46,18 +46,42 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate{
 //    var item1 = TabItem()
     override func viewDidLoad() {
         super.viewDidLoad()
-        let leftVC:LeftMenuViewController = LeftMenuViewController()
-
-        self.navigationController?.navigationBar.isTranslucent = false
-
-        self.delegate = self
         
+       tutorialView()
+        
+        setNavBackButton()
+        
+    }
+    func tutorialView(){
+        print("tutorial")
+        if !UserDefaults.standard.bool(forKey: "TUTORIAL"){
+            print("tutorial1")
+            let tutorialVC = IntroViewController()
+            let navigationController = UINavigationController(rootViewController: tutorialVC)
+            tutorialVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            self.present(navigationController, animated: false, completion:{
+                self.createInterface()
+           });
+        }else{
+            createInterface()
+        }
+    }
+    
+    func createInterface(){
+        
+        let container = MFSideMenuContainerViewController()
+        container.centerViewController = navigationController
+        let leftVC = LeftMenuViewController()
+        container.leftMenuViewController  = leftVC
+        
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.delegate = self
         self.view.backgroundColor = UIColor.white
-
-//        self.setNavBackButton()
-
+        
+        //        self.setNavBackButton()
+        
         UITabBar.appearance().tintColor = YELLOWCOLOR
-        UITabBar.appearance().barTintColor = UIColor.white//tabbar background color
+//        UITabBar.appearance().barTintColor = UIColor.white//tabbar background color
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: TEXTCOLOR!], for:.normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: YELLOWCOLOR!], for:.selected)
         let newVC = NewsViewController()
@@ -78,26 +102,38 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate{
         let tabFourItem4 = UITabBarItem(title: "Санал хүсэлт", image: UIImage(named: "feed_icons"), selectedImage: UIImage(named: "feed_selected"))
         feedVC.tabBarItem = tabFourItem4
         self.viewControllers = [newVC, serVC, horVC, feedVC]
-
+        
+//        let tabBarController = MainTabBarController()
+//        let navigationController = UINavigationController(rootViewController: tabBarController)
+//        let container = MFSideMenuContainerViewController()
+//        container.centerViewController = navigationController
+//        let leftVC = LeftMenuViewController()
+//        container.leftMenuViewController  = leftVC
+//        self.window?.rootViewController = container
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.selectedIndex = USERDEF.integer(forKey: "index")
         USERDEF.removeObject(forKey: "index")
-
     }
-   
+ 
+    
+    
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
 //        self.navigationItem.title = viewController.title?.uppercased()
         
     }
-    
+    func setNavBackButton(){
+        self.navigationItem.leftBarButtonItems = [leftMenuItem()]
+        
+        //self.navigationItem.title = navTitle as String
+    }
     
     func leftMenuItem()->UIBarButtonItem{
         let leftMenuButton = UIButton(type: UIButtonType.custom) as UIButton
         leftMenuButton.frame = CGRect(x:0, y:0,width: 40,height: 50)
-        leftMenuButton.setImage(UIImage (named: "icon_menu.png"), for: UIControlState.normal )
+        leftMenuButton.setImage(UIImage (named: "icon_menu"), for: UIControlState.normal )
         leftMenuButton.addTarget(self, action:#selector(self.leftMenuButtonClicked), for: UIControlEvents.touchUpInside)
         let leftItem : UIBarButtonItem = UIBarButtonItem()
         leftItem.customView = leftMenuButton
@@ -105,7 +141,6 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate{
     }
     
    @objc func leftMenuButtonClicked(){
-        print("asdasdasd")
         self.menuContainerViewController.toggleLeftSideMenuCompletion({ () -> Void in
         })
     }

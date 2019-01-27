@@ -21,9 +21,11 @@ class LeftMenuCell: UITableViewCell {
         cellImage  = UIImageView(frame:CGRect(x:15,y: 5,width: 30, height:30))
         self.addSubview(cellImage)
         
-        menuLabel = UILabel(frame: CGRect(x:cellImage.frame.maxX, y:0 , width:self.frame.size.width - cellImage.frame.size.width, height:self.frame.size.height ))
-        menuLabel.font = UIFont(name: LIGHTFONT, size: 14)
-        menuLabel.textColor = UIColor.black
+        menuLabel = UILabel(frame: CGRect(x:cellImage.frame.maxX, y:0 , width:self.frame.size.width - cellImage.frame.size.width-80, height:self.frame.size.height ))
+        menuLabel.font = menuLabel.font.withSize(12)
+
+        menuLabel.textColor = UIColor(hexString: "0089c8")
+        menuLabel.numberOfLines = 3
         self.addSubview(menuLabel)
         
         
@@ -31,21 +33,21 @@ class LeftMenuCell: UITableViewCell {
     }
     override func layoutSubviews() {
         super.layoutSubviews()
-        if endCellBool == true {
-            lineView = UIView(frame: CGRect(x:0, y:0 , width:self.frame.size.width,height: 1 ))
-            lineView.backgroundColor = MAINGREEN
-            self.addSubview(lineView)
-
-            lineView = UIView(frame: CGRect(x:0, y: self.frame.size.height , width:self.frame.size.width, height:1 ))
-            lineView.backgroundColor = MAINGREEN
-            self.addSubview(lineView)
-
-        }else{
-            lineView = UIView(frame: CGRect(x:0,y: 0 ,width: self.frame.size.width,height: 1 ))
-            lineView.backgroundColor = MAINGREEN
-            self.addSubview(lineView)
-
-        }
+//        if endCellBool == true {
+//            lineView = UIView(frame: CGRect(x:0, y:0 , width:self.frame.size.width,height: 1 ))
+//            lineView.backgroundColor = MAINGREEN
+//            self.addSubview(lineView)
+//
+//            lineView = UIView(frame: CGRect(x:0, y: self.frame.size.height , width:self.frame.size.width, height:1 ))
+//            lineView.backgroundColor = MAINGREEN
+//            self.addSubview(lineView)
+//
+//        }else{
+//            lineView = UIView(frame: CGRect(x:0,y: 0 ,width: self.frame.size.width,height: 1 ))
+//            lineView.backgroundColor = MAINGREEN
+//            self.addSubview(lineView)
+//
+//        }
     }
     
     required init?(coder aDecoder: NSCoder) {

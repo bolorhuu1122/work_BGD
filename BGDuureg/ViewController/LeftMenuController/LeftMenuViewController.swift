@@ -23,25 +23,30 @@ class LeftMenuViewController: UIViewController,UITableViewDataSource,UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menus = ["Мэдээ","Төрийн үйлчилгээ","Хороод","Санал, хүсэлт"] // заавар -> хөгжүүлэлт, тухай
-        icons = ["home","zaavar","tuhai","garah"]
+        menus = ["Мэдээ","Төрийн үйлчилгээ","Хороод","Санал, хүсэлт","Төсөв санхүүгийн ил тод байдал","Үйл ажиллагааны ил тод байдал","Хүний нөөцийн ил тод байдал","Худалдан авах ажиллагааны ил тод байдал"] // заавар -> хөгжүүлэлт, тухай
 
         //self.view.backgroundColor = UIColor.blueColor()
         LeftMenuTable = UITableView(frame: CGRect(x:0, y:0, width:self.view.frame.size.width+50, height: self.view.frame.size.height), style: .grouped)
         self.LeftMenuTable.delegate = self
         self.LeftMenuTable.dataSource = self
-//        self.LeftMenuTable.backgroundColor =  UIColor(hexString: "3f8a7e")
+        self.LeftMenuTable.backgroundColor =  .white
         self.LeftMenuTable.register(LeftMenuCell.self, forCellReuseIdentifier: "cell")
-        self.LeftMenuTable.separatorStyle = .none
-//        headerView.addSubview(cameraButton)
-        headerView.addSubview(nameLabel)
+//        self.LeftMenuTable.separatorStyle = .none
         self.LeftMenuTable.tableHeaderView = headerView
         
         self.view.addSubview(LeftMenuTable)
         self.view.addSubview(logoImageView)
         //Do any additional setup after loading the view.
     }
-    
+    lazy var newsImage: UIImageView = {
+        var newsImage  = UIImageView(frame:CGRect(x: 5, y: 5, width: 100, height: 100))
+        //        newsImage.backgroundColor = UIColor.blue
+        newsImage.layer.cornerRadius = 4
+        newsImage.layer.masksToBounds = true
+        newsImage.contentMode = .scaleAspectFill
+        newsImage.image = UIImage(named:"city_cover")
+        return newsImage
+    }()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -58,20 +63,21 @@ class LeftMenuViewController: UIViewController,UITableViewDataSource,UITableView
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:LeftMenuCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! LeftMenuCell
-        if indexPath.row == menus.count-1 {
-            cell.endCellBool = true
-        }else{
-            cell.endCellBool = false
-
-        }
+//        if indexPath.row == menus.count-1 {
+//            cell.endCellBool = true
+//        }else{
+////            cell.endCellBool = false
+//
+//        }
         cell.menuLabel.text = menus.object(at: indexPath.row) as? String
-        cell.cellImage.image = UIImage(named: "\(icons.object(at: indexPath.row))")
-    
+        cell.cellImage.image = UIImage(named: "leftIcon")
+        cell.menuLabel.highlightedTextColor = UIColor(hexString: "ff7a3c")
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var controllers: NSArray
        let mainVC :MainTabBarController = MainTabBarController()
+        let sideVC :SideViewController = SideViewController()
 
 //        let feedVC:FeedbackViewController = FeedbackViewController()
 
@@ -79,7 +85,6 @@ class LeftMenuViewController: UIViewController,UITableViewDataSource,UITableView
         switch indexPath.row {
         case 0:
             mainVC.tabBarController?.selectedIndex = 0
-            //            secondTab.array = firstArray
             USERDEF.set(0, forKey: "index")
             USERDEF.synchronize()
 
@@ -110,6 +115,42 @@ class LeftMenuViewController: UIViewController,UITableViewDataSource,UITableView
             navController.viewControllers = controllers as! [UIViewController]
 
             break
+        case 4:
+//            USERDEF.set(3, forKey: "index")
+//            USERDEF.synchronize()
+            
+            sideVC.type = "1"
+            controllers = [sideVC]
+            navController.viewControllers = controllers as! [UIViewController]
+            
+            break
+        case 5:
+//            USERDEF.set(3, forKey: "index")
+//            USERDEF.synchronize()
+            
+            sideVC.type = "2"
+            controllers = [sideVC]
+            navController.viewControllers = controllers as! [UIViewController]
+            
+            break
+        case 6:
+//            USERDEF.set(3, forKey: "index")
+//            USERDEF.synchronize()
+           
+            sideVC.type = "3"
+            controllers = [sideVC]
+            navController.viewControllers = controllers as! [UIViewController]
+            
+            break
+        case 7:
+//            USERDEF.set(3, forKey: "index")
+//            USERDEF.synchronize()
+            sideVC.type = "4"
+
+            controllers = [sideVC]
+            navController.viewControllers = controllers as! [UIViewController]
+            
+            break
         default:
             break
         }
@@ -120,7 +161,10 @@ class LeftMenuViewController: UIViewController,UITableViewDataSource,UITableView
     lazy var headerView:UIView = {
         var headerView = UIView(frame: CGRect(x:0,y:0,width:self.view.frame.size.width, height: 200))
 //        headerView.backgroundColor = UIColor(hexString: "3f8a7e")
-        //headerImage.image = UIImage(named: "icon_camera")
+        var headerImage = UIImageView(frame: CGRect(x:20,y:50,width:self.view.frame.size.width-130,height: 110))
+        headerImage.image = UIImage(named: "header_logo")
+        headerImage.contentMode = .scaleAspectFit
+        headerView.addSubview(headerImage)
         return headerView
     }()
 //    lazy var cameraButton: UIButton = {
@@ -152,34 +196,7 @@ class LeftMenuViewController: UIViewController,UITableViewDataSource,UITableView
 //
 //        return button
 //    }();
-    lazy var nameLabel: UILabel = {
-        var xx:CGFloat = 50
-        switch UIScreen.main.bounds.size.height {
-        case 568:
-            xx = 50
-            break
-        case 667:
-            xx = 85
-            print("iphone 6")
-            break
-        case 736.0:
-            xx = 120
-            break
-        default:
-            break
-        }
-
-        var label = UILabel(frame: CGRect(x:0,y:100, width: windowFrame.width-xx,height:25))
-        label.backgroundColor = UIColor.clear
-//        label.text = self.userItem.name.uppercaseString
-        label.textColor = UIColor.white
-//        label.font = UIFont(name: LIGHTFONT, size: 18)
-        label.numberOfLines = 1
-        label.textAlignment = .center
-        //label.sizeToFit()
-        return label
-    }()
-    
+  
     lazy var logoImageView:UIImageView = {
         var xx:CGFloat = 100
         switch UIScreen.main.bounds.size.height {
@@ -197,24 +214,12 @@ class LeftMenuViewController: UIViewController,UITableViewDataSource,UITableView
             break
         }
 
-        var headerView = UIImageView(frame: CGRect(x:50,y:self.view.frame.size.height-45,width:self.view.frame.size.width-50-xx,height: 25))
+        var headerView = UIImageView(frame: CGRect(x:0,y:self.view.frame.size.height-50,width:self.view.frame.size.width-50,height: 50))
         //headerView.backgroundColor = UIColor(hexString: "3f8a7e")
-        headerView.image = UIImage(named: "gg_logo")
+        headerView.image = UIImage(named: "city_cover")
         return headerView
     }()
-    
-    func cameraButtonClicked(sender:UIButton){
-//        var controllers: NSArray
-//        let proVC = ProfileViewController()
-//        proVC.userItem = self.userItem
-//        proVC.navTitle = "МИНИЙ БУЛАН"
-//        let navController: UINavigationController = self.menuContainerViewController.centerViewController as! UINavigationController;
-//
-//        controllers = [proVC]
-//        navController.viewControllers = controllers as! [UIViewController]
-//        self.menuContainerViewController.setMenuState(MFSideMenuStateClosed, completion: nil)
 
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
