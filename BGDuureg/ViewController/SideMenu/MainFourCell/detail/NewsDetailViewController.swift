@@ -51,7 +51,7 @@ class NewsDetailViewController: UIViewController,WKUIDelegate {
                     
                     self.descHtml = dic["description"] as! String
                     print("descHtml=  \(self.descHtml)")
-                    self.webView = WKWebView(frame: CGRect(x: 0, y:0, width: self.view.frame.width, height: self.view.frame.height))
+                    self.webView = WKWebView(frame: CGRect(x: 5, y:0, width: self.view.frame.width-10, height: self.view.frame.height))
                     self.webView.loadHTMLString(self.descHtml, baseURL: nil)
                     self.view.addSubview(self.webView)
                     HUD.hide(animated: true)

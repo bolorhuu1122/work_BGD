@@ -191,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				5123DA142193083E00C28ACE /* detail */,
-				5123DA13219304B800C28ACE /* Cells */,
 				5123DA0E219303AD00C28ACE /* PhotoViewCollectionInCell.swift */,
 				513CD56C2156A306002E8C6F /* OntslohCollectionView.swift */,
 				5123DA102193043C00C28ACE /* VideoCollectionInCell.swift */,
@@ -212,6 +211,7 @@
 		5123DA142193083E00C28ACE /* detail */ = {
 			isa = PBXGroup;
 			children = (
+				51215566218ED04400BFC038 /* PdfViewController.swift */,
 				5123DA152193086500C28ACE /* NewsDetailViewController.swift */,
 			);
 			path = detail;
@@ -222,7 +222,6 @@
 			children = (
 				51250F2921554496006BE32D /* SideViewController.swift */,
 				51215562218EB95800BFC038 /* SideTableViewCell.swift */,
-				51215566218ED04400BFC038 /* PdfViewController.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -267,6 +266,7 @@
 				516A22531FF64A6A004AEF95 /* SupportigFile */,
 				516A223B1FF62A64004AEF95 /* ViewController */,
 				516A220D1FF62389004AEF95 /* AppDelegate.swift */,
+				5123DA13219304B800C28ACE /* Cells */,
 				516A220F1FF62389004AEF95 /* ViewController.swift */,
 				516A22111FF62389004AEF95 /* Main.storyboard */,
 				516A22141FF62389004AEF95 /* Assets.xcassets */,
@@ -321,6 +321,7 @@
 			children = (
 				51250F282155447C006BE32D /* Others */,
 				516A22451FF63881004AEF95 /* MainTabBarController.swift */,
+				5123DA122193048800C28ACE /* MainFourCell */,
 				516A22471FF63BD9004AEF95 /* NewsViewController */,
 				516A224A1FF63C0B004AEF95 /* FeedbackController */,
 				516A22481FF63BE7004AEF95 /* ServiceController */,
@@ -334,7 +335,6 @@
 			children = (
 				51761BA320147F110022CFC5 /* MenuBar.swift */,
 				516A224B1FF63C5A004AEF95 /* NewsViewController.swift */,
-				5123DA122193048800C28ACE /* MainFourCell */,
 			);
 			path = NewsViewController;
 			sourceTree = "<group>";
@@ -352,7 +352,6 @@
 			isa = PBXGroup;
 			children = (
 				516A22511FF63C90004AEF95 /* HoroodViewController.swift */,
-				51046AE3205F9D9E00F55BDB /* HorooDetialViewController.swift */,
 			);
 			path = HoroodController;
 			sourceTree = "<group>";
@@ -361,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				516A224D1FF63C74004AEF95 /* FeedbackViewController.swift */,
+				51046AE3205F9D9E00F55BDB /* HorooDetialViewController.swift */,
 				512F2B0E20BBE432003CA2FA /* FeedSendViewController.swift */,
 			);
 			path = FeedbackController;

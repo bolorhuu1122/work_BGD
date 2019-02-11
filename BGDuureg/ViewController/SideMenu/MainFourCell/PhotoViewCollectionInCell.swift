@@ -63,6 +63,7 @@ class PhotoViewCollectionInCell: BaseCell,UICollectionViewDelegate,UICollectionV
         cell.delegate = self
         let imageUrl = NSURL(string:item.picture as String);
         cell.newsImage.setImageWith(imageUrl as! URL)
+        
         if (indexPath as NSIndexPath).row == dataArray.count-1 {
             //                print("print = \(indexPath.row)")
             self.loadData()

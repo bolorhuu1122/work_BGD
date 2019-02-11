@@ -283,10 +283,10 @@ class ServiceViewController: UIViewController {
         self.view.addSubview(scrollView);
     }
     @objc func detailCkiled(_ sender:UIButton){
-        let detVC = ServiceDetailController()
+        let detVC = ServiceDetailController()//http://bgd.mn/json/url.html
         detVC.service = serviceUrl[sender.tag-1] as! NSString
         detVC.title = serviceMain[sender.tag-1] as! String
-        
+
         self.navigationController?.pushViewController(detVC, animated: true)
 
     }
@@ -294,7 +294,6 @@ class ServiceViewController: UIViewController {
         let detVC = ServiceDetailController()
         detVC.service = serviceMainUrl[sender.tag-1] as! NSString
         detVC.title = serviceMainUrl[sender.tag-1] as! String
-        
         self.navigationController?.pushViewController(detVC, animated: true)
 
     }
